@@ -16,52 +16,52 @@ export default {
         // Example: className="text-4xl md:text-5xl lg:text-6xl"
       },
       colors: {
-        // Rustic Earthy Christmas Theme
-        'primary-navy': '#386641',      // Hunter Green - primary headings
-        'primary-blue': '#386641',      // Hunter Green - professional
-        'accent-teal': '#6A994E',       // Sage Green - secondary accents
-        'accent-cyan': '#6A994E',       // Sage Green - trust and nature
-        'warm-orange': '#BC4749',       // Blushed Brick - primary CTA
-        'warm-amber': '#BC4749',        // Blushed Brick - action
-        'success-emerald': '#6A994E',   // Sage Green - success states
-        'success-green': '#6A994E',     // Sage Green - positive outcomes
-        'purple-primary': '#BC4749',    // Blushed Brick - converted
-        'purple-accent': '#F2E8CF',     // Champagne Mist - subtle accents
-        'neutral-slate': '#386641',     // Hunter Green - body text
-        'neutral-gray': '#6A994E',      // Sage Green - secondary text
-        'light-gray': '#F2E8CF',        // Champagne Mist - section backgrounds
-        'warm-gray': '#F2E8CF',         // Champagne Mist - warmth
-        'cta-gradient-start': '#BC4749', // Blushed Brick start
-        'cta-gradient-end': '#A73C3E',   // Darker Brick end
-        'warning-orange': '#BC4749',     // Blushed Brick - urgency
-        'alert-amber': '#A7C957',        // Yellow Green - attention
-        'coral-primary': '#BC4749',      // Blushed Brick - excitement
-        'coral-accent': '#D16063',       // Lighter Brick - energy
-        'sage-primary': '#6A994E',       // Sage Green - natural vitality
-        'sage-accent': '#A7C957',        // Yellow Green - growth
-        'honey-primary': '#A7C957',      // Yellow Green - optimism
-        'honey-accent': '#B8D966',       // Bright Yellow Green - hope
-        'turquoise-primary': '#6A994E',  // Sage Green - trust
-        'turquoise-light': '#A7C957',    // Yellow Green - energy
-        'magenta-primary': '#BC4749',    // Blushed Brick - excitement
-        'magenta-light': '#D16063',      // Lighter Brick - friendliness
-        'lime-primary': '#A7C957',       // Yellow Green - vitality
-        'lime-light': '#B8D966',         // Bright Yellow Green - growth
+        // Modern Fintech Theme - Professional & Trustworthy
+        'primary-navy': '#0A2463',      // Deep Navy - primary headings
+        'primary-blue': '#1E3A8A',      // Royal Blue - professional
+        'accent-teal': '#06B6D4',       // Vibrant Cyan - secondary accents
+        'accent-cyan': '#0EA5E9',       // Sky Blue - trust and innovation
+        'warm-orange': '#F97316',       // Vibrant Orange - primary CTA
+        'warm-amber': '#FB923C',        // Bright Amber - action
+        'success-emerald': '#10B981',   // Emerald Green - success states
+        'success-green': '#22C55E',     // Green - positive outcomes
+        'purple-primary': '#7C3AED',    // Vivid Purple - premium
+        'purple-accent': '#A78BFA',     // Light Purple - subtle accents
+        'neutral-slate': '#1E293B',     // Dark Slate - body text
+        'neutral-gray': '#64748B',      // Slate Gray - secondary text
+        'light-gray': '#F8FAFC',        // Off-White - section backgrounds
+        'warm-gray': '#F1F5F9',         // Cool Gray - warmth
+        'cta-gradient-start': '#F97316', // Orange start
+        'cta-gradient-end': '#EA580C',   // Darker Orange end
+        'warning-orange': '#F59E0B',     // Amber - urgency
+        'alert-amber': '#FBBF24',        // Yellow - attention
+        'coral-primary': '#EF4444',      // Red - excitement
+        'coral-accent': '#F87171',       // Light Red - energy
+        'sage-primary': '#10B981',       // Emerald - natural vitality
+        'sage-accent': '#34D399',        // Light Emerald - growth
+        'honey-primary': '#FBBF24',      // Golden Yellow - optimism
+        'honey-accent': '#FCD34D',       // Bright Yellow - hope
+        'turquoise-primary': '#14B8A6',  // Teal - trust
+        'turquoise-light': '#2DD4BF',    // Light Teal - energy
+        'magenta-primary': '#EC4899',    // Pink - excitement
+        'magenta-light': '#F472B6',      // Light Pink - friendliness
+        'lime-primary': '#84CC16',       // Lime - vitality
+        'lime-light': '#A3E635',         // Bright Lime - growth
       },
       backgroundImage: {
-        'hero-gradient': 'linear-gradient(135deg, #F2E8CF 0%, #F5ECD7 50%, #F2E8CF 100%)',
-        'warm-gradient': 'linear-gradient(135deg, #BC4749 0%, #A73C3E 100%)',
-        'success-gradient': 'linear-gradient(135deg, #6A994E 0%, #A7C957 100%)',
-        'coral-gradient': 'linear-gradient(135deg, #BC4749 0%, #D16063 100%)',
-        'cta-gradient': 'linear-gradient(135deg, #BC4749 0%, #A73C3E 100%)',
-        'alert-gradient': 'linear-gradient(135deg, #A7C957 0%, #B8D966 100%)',
-        'care-gradient': 'linear-gradient(135deg, #6A994E 0%, #A7C957 100%)',
-        'healing-gradient': 'linear-gradient(135deg, #6A994E 0%, #8BB957 100%)',
-        'vibrant-gradient': 'linear-gradient(135deg, #BC4749 0%, #6A994E 50%, #A7C957 100%)',
-        'turquoise-gradient': 'linear-gradient(135deg, #6A994E 0%, #8BB957 100%)',
-        'lime-gradient': 'linear-gradient(135deg, #A7C957 0%, #B8D966 100%)',
-        'magenta-gradient': 'linear-gradient(135deg, #BC4749 0%, #D16063 100%)',
-        'rainbow-gradient': 'linear-gradient(135deg, #BC4749 0%, #6A994E 50%, #A7C957 100%)',
+        'hero-gradient': 'linear-gradient(135deg, #0A2463 0%, #1E3A8A 50%, #0EA5E9 100%)',
+        'warm-gradient': 'linear-gradient(135deg, #F97316 0%, #EA580C 100%)',
+        'success-gradient': 'linear-gradient(135deg, #10B981 0%, #34D399 100%)',
+        'coral-gradient': 'linear-gradient(135deg, #EF4444 0%, #F87171 100%)',
+        'cta-gradient': 'linear-gradient(135deg, #F97316 0%, #EA580C 100%)',
+        'alert-gradient': 'linear-gradient(135deg, #FBBF24 0%, #FCD34D 100%)',
+        'care-gradient': 'linear-gradient(135deg, #06B6D4 0%, #0EA5E9 100%)',
+        'healing-gradient': 'linear-gradient(135deg, #10B981 0%, #22C55E 100%)',
+        'vibrant-gradient': 'linear-gradient(135deg, #7C3AED 0%, #EC4899 50%, #F97316 100%)',
+        'turquoise-gradient': 'linear-gradient(135deg, #14B8A6 0%, #2DD4BF 100%)',
+        'lime-gradient': 'linear-gradient(135deg, #84CC16 0%, #A3E635 100%)',
+        'magenta-gradient': 'linear-gradient(135deg, #EC4899 0%, #F472B6 100%)',
+        'rainbow-gradient': 'linear-gradient(135deg, #7C3AED 0%, #06B6D4 50%, #10B981 100%)',
       },
     },
   },

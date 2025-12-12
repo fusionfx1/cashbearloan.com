@@ -9,7 +9,7 @@ import Benefits from './components/Benefits';
 import SocialProof from './components/SocialProof';
 import Eligibility from './components/Eligibility';
 import ApplicationProcess from './components/ApplicationProcess';
-import ConversionFooter from './components/ConversionFooter';
+import Footer from './components/Footer';
 import { getOrganizationSchema, getLoanProductSchema, getWebsiteSchema } from './utils/structuredData';
 import StickyBottomBar from './components/StickyBottomBar';
 import FloatingCTA from './components/FloatingCTA';
@@ -161,37 +161,36 @@ function App() {
       <Header />
       <main id="main-content" role="main">
         <Hero />
-        <UrgencySection />
-        <SocialProof />
-        <ContextualCTA variant="social" onApplyClick={handleQuickApply} />
         <Benefits />
-        <ContextualCTA variant="benefits" onApplyClick={handleQuickApply} />
         <Suspense fallback={<div className="py-12 text-center">Loading calculator...</div>}>
           <LoanCalculator />
         </Suspense>
+        <SocialProof />
+        <ContextualCTA variant="social" onApplyClick={handleQuickApply} />
         <Suspense fallback={<div className="py-12 text-center">Loading...</div>}>
           <PaymentPlans />
         </Suspense>
         <Eligibility />
-        <ContextualCTA variant="eligibility" onApplyClick={handleQuickApply} />
         <ApplicationProcess />
+        <UrgencySection />
+        <ContextualCTA variant="eligibility" onApplyClick={handleQuickApply} />
         <Suspense fallback={<div className="py-12 text-center">Loading...</div>}>
-          <PartnerLenderDisclosure />
-        </Suspense>
-        <Suspense fallback={<div className="py-12 text-center">Loading...</div>}>
-          <StateAvailability />
+          <FAQ />
         </Suspense>
         <Suspense fallback={<div className="py-12 text-center">Loading...</div>}>
           <TrustSection />
         </Suspense>
         <Suspense fallback={<div className="py-12 text-center">Loading...</div>}>
-          <Disclosures />
+          <StateAvailability />
         </Suspense>
         <Suspense fallback={<div className="py-12 text-center">Loading...</div>}>
-          <FAQ />
+          <PartnerLenderDisclosure />
+        </Suspense>
+        <Suspense fallback={<div className="py-12 text-center">Loading...</div>}>
+          <Disclosures />
         </Suspense>
       </main>
-      <ConversionFooter />
+      <Footer />
       <FloatingCTA onApplyClick={handleQuickApply} />
       <StickyBottomBar />
       <Suspense fallback={null}>
