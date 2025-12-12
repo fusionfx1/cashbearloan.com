@@ -54,12 +54,6 @@ const Header: React.FC = () => {
               <button onClick={() => scrollToSection('calculator')} className="text-neutral-slate hover:text-primary-blue font-semibold transition-colors">
                 Calculator
               </button>
-              <button onClick={() => scrollToSection('eligibility')} className="text-neutral-slate hover:text-primary-blue font-semibold transition-colors">
-                Eligibility
-              </button>
-              <button onClick={() => scrollToSection('faq')} className="text-neutral-slate hover:text-primary-blue font-semibold transition-colors">
-                FAQ
-              </button>
               <button
                 onClick={handleApply}
                 className="bg-cta-gradient text-white px-6 py-3 rounded-full font-bold hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center"
@@ -88,12 +82,6 @@ const Header: React.FC = () => {
                 </button>
                 <button onClick={() => scrollToSection('calculator')} className="text-left text-neutral-slate hover:text-primary-blue font-semibold py-2 transition-colors">
                   Calculator
-                </button>
-                <button onClick={() => scrollToSection('eligibility')} className="text-left text-neutral-slate hover:text-primary-blue font-semibold py-2 transition-colors">
-                  Eligibility
-                </button>
-                <button onClick={() => scrollToSection('faq')} className="text-left text-neutral-slate hover:text-primary-blue font-semibold py-2 transition-colors">
-                  FAQ
                 </button>
                 <button
                   onClick={handleApply}
