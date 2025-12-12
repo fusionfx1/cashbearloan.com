@@ -18,33 +18,6 @@ const Hero: React.FC = () => {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Google Ads Required Disclosure - Top of Page */}
-        <div className="bg-amber-100 border-3 border-amber-500 rounded-xl p-5 sm:p-6 mb-8 max-w-6xl mx-auto shadow-xl">
-          <div className="text-center">
-            <p className="text-neutral-slate font-extrabold text-lg sm:text-xl mb-3">
-              IMPORTANT: We Are Not a Lender - Loan Matching Service
-            </p>
-            <div className="grid sm:grid-cols-3 gap-4 text-left text-neutral-slate text-sm sm:text-base">
-              <div className="bg-white rounded-lg p-3">
-                <p className="font-bold text-amber-800 mb-1">Maximum APR</p>
-                <p className="font-extrabold text-2xl">34.99%</p>
-                <p className="text-xs text-neutral-gray mt-1">Below 36% threshold</p>
-              </div>
-              <div className="bg-white rounded-lg p-3">
-                <p className="font-bold text-amber-800 mb-1">Repayment Terms</p>
-                <p className="font-extrabold text-xl">61 days - 72 months</p>
-                <p className="text-xs text-neutral-gray mt-1">Choose your term</p>
-              </div>
-              <div className="bg-white rounded-lg p-3">
-                <p className="font-bold text-amber-800 mb-1">Representative Example</p>
-                <p className="font-bold text-sm">$5,000 at 21% APR, 24 mo</p>
-                <p className="font-bold text-lg">$254.12/mo</p>
-                <p className="text-xs text-neutral-gray">Total: $6,098.88</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Centered Hero Content */}
         <div className="text-center max-w-5xl mx-auto space-y-8 lg:space-y-12">
 
