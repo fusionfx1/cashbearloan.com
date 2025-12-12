@@ -1,0 +1,218 @@
+import React, { useState, lazy, Suspense, useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
+import SEO from './components/SEO';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import UrgencySection from './components/UrgencySection';
+import Benefits from './components/Benefits';
+import SocialProof from './components/SocialProof';
+import Eligibility from './components/Eligibility';
+import ApplicationProcess from './components/ApplicationProcess';
+import ConversionFooter from './components/ConversionFooter';
+import { getOrganizationSchema, getLoanProductSchema, getWebsiteSchema } from './utils/structuredData';
+import StickyBottomBar from './components/StickyBottomBar';
+import FloatingCTA from './components/FloatingCTA';
+import ContextualCTA from './components/ContextualCTA';
+import { initDeferredAnalytics } from './utils/analytics';
+
+// Lazy load below-fold and modal components for better initial load
+const LoanCalculator = lazy(() => import('./components/LoanCalculator'));
+const PaymentPlans = lazy(() => import('./components/PaymentPlans'));
+const TrustSection = lazy(() => import('./components/TrustSection'));
+const Disclosures = lazy(() => import('./components/Disclosures'));
+const FAQ = lazy(() => import('./components/FAQ'));
+const QuickStartModal = lazy(() => import('./components/QuickStartModal'));
+const ApplicationModal = lazy(() => import('./components/ApplicationModal'));
+const SnowfallEffect = lazy(() => import('./components/SnowfallEffect'));
+const PartnerLenderDisclosure = lazy(() => import('./components/PartnerLenderDisclosure'));
+const StateAvailability = lazy(() => import('./components/StateAvailability'));
+
+// Lazy load separate pages
+const ApplyPage = lazy(() => import('./components/ApplyPage'));
+const SupportPage = lazy(() => import('./components/SupportPage'));
+const ContactPage = lazy(() => import('./components/ContactPage'));
+const AdvertisingDisclosure = lazy(() => import('./components/AdvertisingDisclosure'));
+
+function App() {
+  const [currentPage, setCurrentPage] = useState<'home' | 'apply' | 'support' | 'contact' | 'disclosure'>('home');
+  const [showQuickStart, setShowQuickStart] = useState(false);
+  const [showApplicationModal, setShowApplicationModal] = useState(false);
+  const [loanAmount, setLoanAmount] = useState<string>('');
+  const [loanPurpose, setLoanPurpose] = useState<string>('');
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleQuickApply = () => {
+    setShowQuickStart(true);
+  };
+
+  const handleQuickStartComplete = (amount: string, purpose: string) => {
+    setLoanAmount(amount);
+    setLoanPurpose(purpose);
+    setShowQuickStart(false);
+    setShowApplicationModal(true);
+  };
+
+  const navigateToApply = () => {
+    setCurrentPage('apply');
+    scrollToTop();
+  };
+
+  const navigateToHome = () => {
+    setCurrentPage('home');
+  };
+
+  const navigateToSupport = () => {
+    setCurrentPage('support');
+  };
+
+  const navigateToContact = () => {
+    setCurrentPage('contact');
+    scrollToTop();
+  };
+
+  const navigateToDisclosure = () => {
+    setCurrentPage('disclosure');
+    scrollToTop();
+  };
+
+  // Add navigation function to window for global access
+  React.useEffect(() => {
+    (window as any).navigateToApply = navigateToApply;
+    (window as any).navigateToHome = navigateToHome;
+    (window as any).navigateToSupport = navigateToSupport;
+    (window as any).navigateToContact = navigateToContact;
+    (window as any).navigateToDisclosure = navigateToDisclosure;
+  }, []);
+
+  // Initialize deferred analytics loading
+  useEffect(() => {
+    initDeferredAnalytics();
+  }, []);
+
+  // Combine structured data for home page
+  const homeStructuredData = [
+    getOrganizationSchema(),
+    getLoanProductSchema(),
+    getWebsiteSchema()
+  ];
+
+  if (currentPage === 'apply') {
+    return (
+      <Suspense fallback={<div className="min-h-screen bg-light-gray flex items-center justify-center"><div className="text-primary-navy">Loading...</div></div>}>
+        <SnowfallEffect />
+        <ApplyPage />
+        <Analytics />
+        <SpeedInsights />
+      </Suspense>
+    );
+  }
+
+  if (currentPage === 'support') {
+    return (
+      <Suspense fallback={<div className="min-h-screen bg-light-gray flex items-center justify-center"><div className="text-primary-navy">Loading...</div></div>}>
+        <SnowfallEffect />
+        <SupportPage />
+        <Analytics />
+        <SpeedInsights />
+      </Suspense>
+    );
+  }
+
+  if (currentPage === 'contact') {
+    return (
+      <Suspense fallback={<div className="min-h-screen bg-light-gray flex items-center justify-center"><div className="text-primary-navy">Loading...</div></div>}>
+        <SnowfallEffect />
+        <ContactPage />
+        <Analytics />
+        <SpeedInsights />
+      </Suspense>
+    );
+  }
+
+  if (currentPage === 'disclosure') {
+    return (
+      <Suspense fallback={<div className="min-h-screen bg-light-gray flex items-center justify-center"><div className="text-primary-navy">Loading...</div></div>}>
+        <SnowfallEffect />
+        <AdvertisingDisclosure />
+        <Analytics />
+        <SpeedInsights />
+      </Suspense>
+    );
+  }
+
+  return (
+    <div className="min-h-screen bg-light-gray snowflake-bg">
+      <Suspense fallback={null}>
+        <SnowfallEffect />
+      </Suspense>
+      <SEO
+        title="Installment Loans - Apply Today | Cash Bear Loans"
+        description="Get the installment loan you need for any purpose. Transparent terms, competitive rates, and simple application process. Apply today for your loan."
+        keywords="installment loans, debt consolidation loans, home improvement loans, medical loans, emergency loans, bad credit loans, online loans"
+        canonicalUrl="https://cashbearloan.com"
+        ogTitle="Get Approved for $1,000-$5,000 Installment Loan Today"
+        ogDescription="Fast approval, transparent terms, and competitive rates. Join 100,000+ customers who got the money they needed quickly and securely."
+        structuredData={homeStructuredData}
+      />
+      <Header />
+      <main id="main-content" role="main">
+        <Hero />
+        <UrgencySection />
+        <SocialProof />
+        <ContextualCTA variant="social" onApplyClick={handleQuickApply} />
+        <Benefits />
+        <ContextualCTA variant="benefits" onApplyClick={handleQuickApply} />
+        <Suspense fallback={<div className="py-12 text-center">Loading calculator...</div>}>
+          <LoanCalculator />
+        </Suspense>
+        <Suspense fallback={<div className="py-12 text-center">Loading...</div>}>
+          <PaymentPlans />
+        </Suspense>
+        <Eligibility />
+        <ContextualCTA variant="eligibility" onApplyClick={handleQuickApply} />
+        <ApplicationProcess />
+        <Suspense fallback={<div className="py-12 text-center">Loading...</div>}>
+          <PartnerLenderDisclosure />
+        </Suspense>
+        <Suspense fallback={<div className="py-12 text-center">Loading...</div>}>
+          <StateAvailability />
+        </Suspense>
+        <Suspense fallback={<div className="py-12 text-center">Loading...</div>}>
+          <TrustSection />
+        </Suspense>
+        <Suspense fallback={<div className="py-12 text-center">Loading...</div>}>
+          <Disclosures />
+        </Suspense>
+        <Suspense fallback={<div className="py-12 text-center">Loading...</div>}>
+          <FAQ />
+        </Suspense>
+      </main>
+      <ConversionFooter />
+      <FloatingCTA onApplyClick={handleQuickApply} />
+      <StickyBottomBar />
+      <Suspense fallback={null}>
+        <QuickStartModal
+          isOpen={showQuickStart}
+          onClose={() => setShowQuickStart(false)}
+          onComplete={handleQuickStartComplete}
+        />
+      </Suspense>
+      <Suspense fallback={null}>
+        <ApplicationModal
+          isOpen={showApplicationModal}
+          onClose={() => setShowApplicationModal(false)}
+          initialAmount={loanAmount}
+          initialPurpose={loanPurpose}
+        />
+      </Suspense>
+      <Analytics />
+      <SpeedInsights />
+    </div>
+  );
+}
+
+export default App;

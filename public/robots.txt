@@ -1,0 +1,24 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://cashbearloan.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Block access to sensitive areas (if any)
+Disallow: /admin/
+Disallow: /api/
+Disallow: /*.json$
+
+# Allow important pages
+Allow: /
+Allow: /apply
+Allow: /support
+Allow: /contact
+
+# Block common bot traps
+Disallow: /wp-admin/
+Disallow: /wp-content/
+Disallow: /cgi-bin/

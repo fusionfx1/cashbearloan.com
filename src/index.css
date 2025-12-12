@@ -1,0 +1,773 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Rustic Earthy Christmas Theme */
+body {
+  background-color: #F2E8CF;
+  color: #386641;
+}
+
+/* Warm vintage snowflake background pattern */
+.snowflake-bg {
+  background-color: #F2E8CF;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(188, 71, 73, 0.04) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(106, 153, 78, 0.04) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(167, 201, 87, 0.03) 0%, transparent 100%),
+    radial-gradient(circle at 10% 80%, rgba(255, 255, 255, 0.5) 1px, transparent 1px),
+    radial-gradient(circle at 90% 20%, rgba(255, 255, 255, 0.4) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 50px 50px, 80px 80px;
+}
+
+/* Vintage frosted glass effect */
+.frosted-glass {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(106, 153, 78, 0.2);
+  box-shadow: 0 8px 32px rgba(56, 102, 65, 0.1);
+}
+
+/* Gentle falling snow animation */
+@keyframes snowfall {
+  0% {
+    transform: translateY(-10vh) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) translateX(var(--drift, 0px)) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Reduced motion support for snow */
+@media (prefers-reduced-motion: reduce) {
+  @keyframes snowfall {
+    0% {
+      transform: translateY(-10vh);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(110vh);
+      opacity: 0;
+    }
+  }
+}
+
+/* Rustic slider styles */
+.slider-modern::-webkit-slider-thumb {
+  appearance: none;
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #BC4749, #A73C3E);
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(188, 71, 73, 0.4);
+  border: 4px solid #F2E8CF;
+  transition: all 0.3s ease;
+}
+
+.slider-modern::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 8px 25px rgba(188, 71, 73, 0.6);
+}
+
+.slider-modern::-webkit-slider-thumb:active {
+  transform: scale(1.3);
+  box-shadow: 0 10px 30px rgba(188, 71, 73, 0.7);
+}
+
+.slider-modern::-moz-range-thumb {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #BC4749, #A73C3E);
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(188, 71, 73, 0.4);
+  border: 4px solid #F2E8CF;
+  transition: all 0.3s ease;
+}
+
+.slider-modern::-moz-range-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 8px 25px rgba(188, 71, 73, 0.6);
+}
+
+.slider-modern::-moz-range-thumb:active {
+  transform: scale(1.3);
+  box-shadow: 0 10px 30px rgba(188, 71, 73, 0.7);
+}
+
+/* Sage green slider styles */
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6A994E, #A7C957);
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(106, 153, 78, 0.4);
+  border: 3px solid #F2E8CF;
+  transition: all 0.2s ease;
+}
+
+.slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+  box-shadow: 0 6px 16px rgba(106, 153, 78, 0.6);
+}
+
+.slider::-webkit-slider-thumb:active {
+  transform: scale(1.25);
+  box-shadow: 0 8px 20px rgba(106, 153, 78, 0.7);
+}
+
+.slider::-moz-range-thumb {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6A994E, #A7C957);
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(106, 153, 78, 0.4);
+  border: 3px solid #F2E8CF;
+  transition: all 0.2s ease;
+}
+
+.slider::-moz-range-thumb:hover {
+  transform: scale(1.15);
+  box-shadow: 0 6px 16px rgba(106, 153, 78, 0.6);
+}
+
+.slider::-moz-range-thumb:active {
+  transform: scale(1.25);
+  box-shadow: 0 8px 20px rgba(106, 153, 78, 0.7);
+}
+
+/* Mobile sage green slider */
+.slider-mobile::-webkit-slider-thumb {
+  appearance: none;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6A994E, #A7C957);
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(106, 153, 78, 0.4);
+  border: 4px solid #F2E8CF;
+  transition: all 0.3s ease;
+  touch-action: manipulation;
+}
+
+.slider-mobile::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+  box-shadow: 0 6px 20px rgba(106, 153, 78, 0.6);
+}
+
+.slider-mobile::-webkit-slider-thumb:active {
+  transform: scale(1.25);
+  box-shadow: 0 8px 24px rgba(106, 153, 78, 0.7);
+}
+
+.slider-mobile::-moz-range-thumb {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6A994E, #A7C957);
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(106, 153, 78, 0.4);
+  border: 4px solid #F2E8CF;
+  transition: all 0.3s ease;
+  touch-action: manipulation;
+}
+
+.slider-mobile::-moz-range-thumb:hover {
+  transform: scale(1.15);
+  box-shadow: 0 6px 20px rgba(106, 153, 78, 0.6);
+}
+
+.slider-mobile::-moz-range-thumb:active {
+  transform: scale(1.25);
+  box-shadow: 0 8px 24px rgba(106, 153, 78, 0.7);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 53%, 80%, 100% {
+    transform: translate3d(0,0,0);
+  }
+  40%, 43% {
+    transform: translate3d(0, -30px, 0);
+  }
+  70% {
+    transform: translate3d(0, -15px, 0);
+  }
+  90% {
+    transform: translate3d(0, -4px, 0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(188, 71, 73, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(188, 71, 73, 0.6);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.4s ease-out;
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-slideInLeft {
+  animation: slideInLeft 0.6s ease-out;
+}
+
+.animate-slideInRight {
+  animation: slideInRight 0.6s ease-out;
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.5s ease-out;
+}
+
+.animate-bounce {
+  animation: bounce 2s infinite;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-spin {
+  animation: spin 4s linear infinite;
+}
+
+/* Earthy gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #BC4749, #6A994E, #A7C957);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Custom focus styles for better accessibility */
+.focus-ring:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.2);
+  border-color: #06b6d4;
+}
+
+/* Rustic Earthy button styles */
+.btn-primary {
+  @apply bg-cta-gradient hover:shadow-xl hover:shadow-warm-orange/30 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg;
+}
+
+.btn-secondary {
+  @apply border-2 border-success-emerald text-success-emerald hover:bg-success-emerald hover:text-light-gray font-bold py-3 px-8 rounded-full transition-all duration-300;
+}
+
+.btn-cta {
+  @apply bg-cta-gradient hover:shadow-xl hover:shadow-warm-orange/30 text-white font-bold py-5 px-12 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg animate-pulse text-xl;
+}
+
+/* Enhanced card hover effects */
+.card-hover {
+  @apply transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl;
+}
+
+/* Modern urgency styling - changed from red to orange */
+.urgency-text {
+  @apply text-warm-orange font-bold animate-pulse;
+}
+
+.countdown-timer {
+  @apply bg-gradient-to-r from-warm-orange to-warm-amber text-white rounded-lg p-4 text-center font-bold;
+}
+
+/* Enhanced trust indicators */
+.trust-badge {
+  @apply bg-success-emerald/10 text-success-emerald px-3 py-1 rounded-full text-sm font-medium border border-success-emerald/20;
+}
+
+/* Enhanced form styling */
+.form-input {
+  @apply w-full px-4 py-4 rounded-xl border-2 border-gray-300 focus:border-primary-blue focus:outline-none transition-colors duration-200 bg-white/95 backdrop-blur-sm;
+}
+
+.form-select {
+  @apply w-full px-4 py-4 rounded-xl border-2 border-gray-300 focus:border-primary-blue focus:outline-none transition-colors duration-200 bg-white/95 backdrop-blur-sm;
+}
+
+/* Improved contrast for better accessibility */
+.text-high-contrast {
+  color: #1f2937; /* Darker gray for better contrast */
+}
+
+.bg-high-contrast {
+  background-color: #ffffff; /* Pure white background */
+}
+
+/* Focus indicators for better accessibility */
+button:focus,
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Skip link for screen readers */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 1000;
+  border-radius: 4px;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* Mobile gradient text readability improvements */
+.gradient-text-mobile {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.1);
+}
+
+.gradient-bg-text-white {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.gradient-bg-text-light {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Enhanced backdrop blur for text containers on gradients */
+.gradient-text-container {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Dark gradient text improvements */
+.dark-gradient-text {
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  font-weight: 600;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .mobile-cta {
+    @apply fixed bottom-0 left-0 right-0 bg-cta-gradient text-white p-4 z-50 shadow-2xl;
+  }
+  
+  /* Mobile-specific touch targets - minimum 44px */
+  button, a, input, select, textarea {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Mobile typography adjustments */
+  h1 {
+    line-height: 1.2;
+  }
+  
+  h2 {
+    line-height: 1.3;
+  }
+  
+  /* Mobile spacing adjustments */
+  .mobile-spacing {
+    @apply px-4 py-6;
+  }
+  
+  /* Mobile grid adjustments */
+  .mobile-grid {
+    @apply grid-cols-1 gap-4;
+  }
+  
+  /* Mobile form adjustments */
+  input, textarea, select {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+}
+
+/* Tablet optimizations */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .tablet-grid {
+    @apply grid-cols-2 gap-6;
+  }
+  
+  .tablet-spacing {
+    @apply px-6 py-8;
+  }
+}
+
+/* Loading states */
+.loading-skeleton {
+  @apply animate-pulse bg-gray-200 rounded;
+}
+
+/* Accessibility improvements */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .btn-primary {
+    @apply border-2 border-black;
+  }
+  
+  .btn-secondary {
+    @apply border-2 border-black bg-white text-black;
+  }
+  
+  /* Ensure text has sufficient contrast in high contrast mode */
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .text-gray-600,
+  .text-gray-700,
+  .text-neutral-gray {
+    color: #000000 !important;
+  }
+  
+  .text-blue-100,
+  .text-purple-100,
+  .text-orange-100 {
+    color: #000000 !important;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .animate-pulse,
+  .animate-bounce,
+  .animate-glow,
+  .animate-float,
+  .animate-spin {
+    animation: none;
+  }
+  
+  .transform {
+    transform: none !important;
+  }
+  
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+/* Glass morphism effects */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-dark {
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile-specific improvements */
+@media (max-width: 640px) {
+  /* Ensure proper touch targets */
+  .touch-target {
+    min-height: 48px;
+    min-width: 48px;
+  }
+  
+  /* Mobile navigation improvements */
+  .mobile-nav {
+    @apply fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 z-50;
+  }
+  
+  /* Mobile modal improvements */
+  .mobile-modal {
+    @apply fixed inset-0 bg-white z-50 overflow-y-auto;
+  }
+  
+  /* Mobile card improvements */
+  .mobile-card {
+    @apply rounded-lg shadow-md border border-gray-200 p-4 mb-4;
+  }
+  
+  /* Mobile text improvements */
+  .mobile-text {
+    @apply text-sm leading-relaxed;
+  }
+
+  /* Mobile gradient text enhancements */
+  .text-on-gradient {
+    font-size: 16px !important;
+    min-font-size: 14px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: 600;
+  }
+
+  /* Ensure minimum contrast for all gradient backgrounds */
+  .bg-gradient-to-r,
+  .bg-gradient-to-br,
+  .bg-gradient-to-bl,
+  .bg-gradient-to-tr,
+  .bg-gradient-to-tl {
+    position: relative;
+  }
+
+  /* Increase opacity of white containers on gradients for mobile */
+  .bg-white\/80 {
+    background: rgba(255, 255, 255, 0.92) !important;
+  }
+
+  .bg-white\/70 {
+    background: rgba(255, 255, 255, 0.88) !important;
+  }
+
+  .bg-white\/60 {
+    background: rgba(255, 255, 255, 0.85) !important;
+  }
+  
+  /* Mobile button improvements */
+  .mobile-button {
+    @apply w-full py-3 px-4 rounded-lg font-semibold text-base;
+  }
+}
+
+/* Landscape mobile optimizations */
+@media (max-width: 896px) and (orientation: landscape) {
+  .landscape-mobile {
+    @apply py-2;
+  }
+  
+  .landscape-mobile h1 {
+    @apply text-2xl;
+  }
+  
+  .landscape-mobile h2 {
+    @apply text-xl;
+  }
+}
+
+/* Safe area support for mobile devices */
+@supports (padding: max(0px)) {
+  .safe-area-inset {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .dark-mode-support {
+    @apply bg-gray-900 text-white;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-only {
+    display: block !important;
+  }
+  
+  * {
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+  }
+}
+
+/* Improved color contrast ratios */
+.text-contrast-safe {
+  color: #1f2937; /* Dark gray with good contrast */
+}
+
+.bg-contrast-safe {
+  background-color: #ffffff; /* Pure white */
+}
+
+/* Gradient text contrast helpers */
+.gradient-heading {
+  -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.15);
+  text-shadow: 0 2px 6px rgba(255, 255, 255, 0.8);
+}
+
+.gradient-body-text {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  font-weight: 500;
+}
+
+/* Better focus indicators */
+.focus-visible:focus {
+  outline: 3px solid #2563eb;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Ensure minimum color contrast ratios */
+.text-accessible-blue {
+  color: #1e40af; /* Darker blue for better contrast */
+}
+
+.text-accessible-green {
+  color: #059669; /* Darker green for better contrast */
+}
+
+.text-accessible-purple {
+  color: #7c3aed; /* Purple with good contrast */
+}
+
+.text-accessible-orange {
+  color: #ea580c; /* Orange with good contrast */
+}
