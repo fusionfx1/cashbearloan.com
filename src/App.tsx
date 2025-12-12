@@ -15,6 +15,7 @@ import StickyBottomBar from './components/StickyBottomBar';
 import FloatingCTA from './components/FloatingCTA';
 import ContextualCTA from './components/ContextualCTA';
 import { initDeferredAnalytics } from './utils/analytics';
+import '../src/examples/testDataExample';
 
 // Lazy load below-fold and modal components for better initial load
 const LoanCalculator = lazy(() => import('./components/LoanCalculator'));
@@ -33,9 +34,10 @@ const ApplyPage = lazy(() => import('./components/ApplyPage'));
 const SupportPage = lazy(() => import('./components/SupportPage'));
 const ContactPage = lazy(() => import('./components/ContactPage'));
 const AdvertisingDisclosure = lazy(() => import('./components/AdvertisingDisclosure'));
+const TestDataDemo = lazy(() => import('./components/TestDataDemo'));
 
 function App() {
-  const [currentPage, setCurrentPage] = useState<'home' | 'apply' | 'support' | 'contact' | 'disclosure'>('home');
+  const [currentPage, setCurrentPage] = useState<'home' | 'apply' | 'support' | 'contact' | 'disclosure' | 'testdata'>('home');
   const [showQuickStart, setShowQuickStart] = useState(false);
   const [showApplicationModal, setShowApplicationModal] = useState(false);
   const [loanAmount, setLoanAmount] = useState<string>('');
@@ -79,6 +81,11 @@ function App() {
     scrollToTop();
   };
 
+  const navigateToTestData = () => {
+    setCurrentPage('testdata');
+    scrollToTop();
+  };
+
   // Add navigation function to window for global access
   React.useEffect(() => {
     (window as any).navigateToApply = navigateToApply;
@@ -86,6 +93,7 @@ function App() {
     (window as any).navigateToSupport = navigateToSupport;
     (window as any).navigateToContact = navigateToContact;
     (window as any).navigateToDisclosure = navigateToDisclosure;
+    (window as any).navigateToTestData = navigateToTestData;
   }, []);
 
   // Initialize deferred analytics loading
@@ -138,6 +146,16 @@ function App() {
       <Suspense fallback={<div className="min-h-screen bg-light-gray flex items-center justify-center"><div className="text-primary-navy">Loading...</div></div>}>
         <SnowfallEffect />
         <AdvertisingDisclosure />
+        <Analytics />
+        <SpeedInsights />
+      </Suspense>
+    );
+  }
+
+  if (currentPage === 'testdata') {
+    return (
+      <Suspense fallback={<div className="min-h-screen bg-light-gray flex items-center justify-center"><div className="text-primary-navy">Loading...</div></div>}>
+        <TestDataDemo />
         <Analytics />
         <SpeedInsights />
       </Suspense>
