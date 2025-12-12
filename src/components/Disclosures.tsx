@@ -38,7 +38,7 @@ const Disclosures: React.FC = () => {
               <div>
                 <h4 className="font-semibold text-neutral-slate mb-2">Annual Percentage Rate (APR)</h4>
                 <p className="text-neutral-gray text-sm">
-                  APR ranges from 5.99% to 34.99% depending on creditworthiness, loan amount, and term length. Maximum APR: 34.99%. We do not offer loans with APR of 36% or higher to U.S. consumers.
+                  APR ranges from 5.99% to 34.99% depending on creditworthiness, loan amount, and term length. Maximum APR: 34.99%.
                   Your specific rate will be disclosed before you accept any loan offer.
                 </p>
               </div>

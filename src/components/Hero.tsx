@@ -118,7 +118,7 @@ const Hero: React.FC = () => {
             </div>
             <div className="pt-4 border-t border-white/20">
               <p className="text-xs text-blue-100">
-                We are a loan marketplace connecting you with licensed lending partners. Checking eligibility may result in a soft credit inquiry. We do not offer loans with APR of 36% or higher.
+                We are a loan marketplace connecting you with licensed lending partners. Checking eligibility may result in a soft credit inquiry.
               </p>
             </div>
           </div>

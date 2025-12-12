@@ -20,9 +20,9 @@ interface SEOProps {
 }
 
 const SEO: React.FC<SEOProps> = ({
-  title = "Personal Installment Loans - Fast & Transparent | Cash Bear Loans",
-  description = "Get approved for personal loans up to $5,000 with Cash Bear Loans. Texas-based lender offering transparent terms, competitive rates from 5.99% to 34.99% APR (max 34.99%), and funding in 1-2 days. We do not offer loans with APR ≥ 36%.",
-  keywords = "personal loans, installment loans, texas lender, cash loans, fast loans, transparent lending, emergency loans, debt consolidation, bad credit loans",
+  title = "Installment Loans - Fast & Transparent | Cash Bear Loans",
+  description = "Get approved for installment loans up to $5,000 with Cash Bear Loans. Texas-based lender offering transparent terms, competitive rates from 5.99% to 34.99% APR (max 34.99%), and funding in 1-2 days.",
+  keywords = "installment loans, texas lender, cash loans, fast loans, transparent lending, emergency loans, debt consolidation, bad credit loans",
   canonicalUrl,
   ogTitle,
   ogDescription,

@@ -128,7 +128,7 @@ const Footer: React.FC = () => {
               <div className="grid sm:grid-cols-2 gap-6">
                 <div>
                   <p className="font-bold text-base mb-2 text-white">Annual Percentage Rate (APR):</p>
-                  <p>Maximum APR: 34.99%. APRs range from 5.99% to 34.99% based on creditworthiness. We do not offer loans with APR of 36% or higher to U.S. consumers.</p>
+                  <p>Maximum APR: 34.99%. APRs range from 5.99% to 34.99% based on creditworthiness.</p>
                 </div>
                 <div>
                   <p className="font-bold text-base mb-2 text-white">Repayment Terms:</p>

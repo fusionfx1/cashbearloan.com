@@ -1,8 +1,8 @@
 export const siteContent = {
   // Site Meta Information
   meta: {
-    title: "Personal Installment Loans - Fast & Transparent | Cash Bear Loans",
-    description: "Get approved for personal loans up to $5,000 with Cash Bear Loans. Texas-based lender offering transparent terms, competitive rates from 5.99% APR, and fast funding in 1-2 days.",
+    title: "Installment Loans - Fast & Transparent | Cash Bear Loans",
+    description: "Get approved for installment loans up to $5,000 with Cash Bear Loans. Texas-based lender offering transparent terms, competitive rates from 5.99% APR, and fast funding in 1-2 days.",
     companyName: "Cash Bear Loans",
     tagline: "Fast. Transparent. Trusted."
   },
@@ -55,14 +55,14 @@ export const siteContent = {
       }
     ],
     guarantees: [
-      "Competitive APR from 5.99% to 34.99% based on your credit profile. We do not offer loans with APR of 36% or higher to U.S. consumers.",
+      "Competitive APR from 5.99% to 34.99% based on your credit profile",
       "Proud to serve customers nationwide from our Conroe, Texas headquarters"
     ]
   },
 
   // Loan Application UI
   loanApplication: {
-    badges: ["FAST PERSONAL LOANS"],
+    badges: ["FAST INSTALLMENT LOANS"],
     title: "How much cash do you need?",
     subtitle: "Choose your amount and get started in minutes",
     amountOptions: [1000, 2000, 3000, 4000, 5000],
@@ -80,7 +80,7 @@ export const siteContent = {
   urgency: {
     badge: "APPLY TODAY",
     headline: "Get Your Cash When You Need It Most",
-    description: "Competitive rates starting at 5.99% APR for qualified borrowers. Maximum APR is 34.99%. Your actual rate is based on your unique credit profile and financial situation. We do not offer loans with APR of 36% or higher.",
+    description: "Competitive rates starting at 5.99% APR for qualified borrowers. Maximum APR is 34.99%. Your actual rate is based on your unique credit profile and financial situation.",
     timer: {
       title: "Offer Expires In:",
       units: ["Hours", "Minutes", "Seconds"]
@@ -96,7 +96,7 @@ export const siteContent = {
       }
     ],
     ctaButton: "GET STARTED NOW",
-    disclaimer: "* APR ranges from 5.99% to 34.99%. Maximum APR: 34.99%. We do not offer loans with APR ≥ 36% to U.S. consumers. Rates shown are for qualified borrowers only. Subject to credit approval, income verification, and underwriting. Terms and conditions apply. Borrowing money costs money."
+    disclaimer: "* APR ranges from 5.99% to 34.99%. Maximum APR: 34.99%. Rates shown are for qualified borrowers only. Subject to credit approval, income verification, and underwriting. Terms and conditions apply. Borrowing money costs money."
   },
 
   // Loan Calculator
@@ -449,7 +449,7 @@ export const siteContent = {
     },
     company: {
       name: "Cash Bear Loans",
-      description: "Texas-based licensed lender providing transparent, fast personal loans to help you handle life's unexpected expenses.",
+      description: "Texas-based licensed lender providing transparent, fast installment loans to help you handle life's unexpected expenses.",
       achievements: [
         "BBB A+ Rated",
         "Licensed in 50 States",
@@ -477,7 +477,7 @@ export const siteContent = {
     copyright: {
       company: "© 2025 Cash Bear Loans, LLC. All rights reserved.",
       license: "Licensed lender in participating states.",
-      rates: "APR ranges from 5.99% to 34.99%. Maximum APR: 34.99%. We do not offer loans with APR of 36% or higher to U.S. consumers.",
+      rates: "APR ranges from 5.99% to 34.99%. Maximum APR: 34.99%.",
       disclaimer: "This website is not an offer to lend. Loan approval subject to credit review."
     }
   },
@@ -489,7 +489,7 @@ export const siteContent = {
       security: "Secure"
     },
     form: {
-      title: "Your Personal Loan Application",
+      title: "Your Loan Application",
       subtitle: "Takes less than 5 minutes. Your info is encrypted and secure."
     },
     footer: {

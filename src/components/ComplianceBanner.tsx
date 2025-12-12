@@ -29,7 +29,7 @@ const ComplianceBanner: React.FC<ComplianceBannerProps> = ({ onNavigateToDisclos
                 <span className="text-amber-700">Important Disclosure:</span> Not a direct lender. Marketing partner only. Maximum APR: 34.99%.
               </p>
               <p className="text-xs lg:text-sm text-neutral-gray mt-1 leading-tight">
-                We do not offer loans with APR of 36% or higher to U.S. consumers. All partner lenders comply with Google Ads policies.
+                All partner lenders comply with Google Ads policies and state lending regulations.
               </p>
             </div>
           </div>

@@ -106,7 +106,7 @@ const ConversionFooter: React.FC = () => {
             <div className="text-sm text-white leading-relaxed space-y-3">
               <div>
                 <p className="font-bold text-base mb-1">Annual Percentage Rate (APR):</p>
-                <p>The Maximum APR is 34.99%. APRs range from 5.99% to 34.99% depending on creditworthiness. We do not offer loans with APR of 36% or higher to U.S. consumers.</p>
+                <p>The Maximum APR is 34.99%. APRs range from 5.99% to 34.99% depending on creditworthiness.</p>
               </div>
               <div>
                 <p className="font-bold text-base mb-1">Repayment Terms:</p>
