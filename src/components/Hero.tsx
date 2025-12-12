@@ -18,6 +18,33 @@ const Hero: React.FC = () => {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Google Ads Required Disclosure - Top of Page */}
+        <div className="bg-amber-100 border-3 border-amber-500 rounded-xl p-5 sm:p-6 mb-8 max-w-6xl mx-auto shadow-xl">
+          <div className="text-center">
+            <p className="text-neutral-slate font-extrabold text-lg sm:text-xl mb-3">
+              IMPORTANT: We Are Not a Lender - Loan Matching Service
+            </p>
+            <div className="grid sm:grid-cols-3 gap-4 text-left text-neutral-slate text-sm sm:text-base">
+              <div className="bg-white rounded-lg p-3">
+                <p className="font-bold text-amber-800 mb-1">Maximum APR</p>
+                <p className="font-extrabold text-2xl">34.99%</p>
+                <p className="text-xs text-neutral-gray mt-1">Below 36% threshold</p>
+              </div>
+              <div className="bg-white rounded-lg p-3">
+                <p className="font-bold text-amber-800 mb-1">Repayment Terms</p>
+                <p className="font-extrabold text-xl">61 days - 72 months</p>
+                <p className="text-xs text-neutral-gray mt-1">Choose your term</p>
+              </div>
+              <div className="bg-white rounded-lg p-3">
+                <p className="font-bold text-amber-800 mb-1">Representative Example</p>
+                <p className="font-bold text-sm">$5,000 at 21% APR, 24 mo</p>
+                <p className="font-bold text-lg">$254.12/mo</p>
+                <p className="text-xs text-neutral-gray">Total: $6,098.88</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Centered Hero Content */}
         <div className="text-center max-w-5xl mx-auto space-y-8 lg:space-y-12">
 
@@ -96,29 +123,39 @@ const Hero: React.FC = () => {
           </div>
 
           {/* APR Disclosure */}
-          <div className="bg-white/15 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/30 text-left max-w-4xl mx-auto space-y-4">
-            <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">Loan Terms at a Glance</h2>
+          <div className="bg-white/15 backdrop-blur-md rounded-2xl p-6 sm:p-8 border-2 border-white/40 text-left max-w-4xl mx-auto space-y-4">
+            <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">Complete Loan Terms Disclosure</h2>
             <div className="grid sm:grid-cols-2 gap-4">
-              <div>
-                <p className="text-sm text-blue-100 mb-1">APR Range</p>
-                <p className="text-lg font-bold">5.99% - 34.99%</p>
-                <p className="text-xs text-blue-200 mt-1">Maximum APR: 34.99%</p>
+              <div className="bg-white/10 p-4 rounded-lg">
+                <p className="text-sm text-blue-100 mb-1 font-semibold">APR Range</p>
+                <p className="text-2xl font-bold">5.99% - 34.99%</p>
+                <p className="text-sm text-blue-200 mt-2 font-bold">Maximum APR: 34.99%</p>
+                <p className="text-xs text-blue-200 mt-1">(Below 36% regulatory threshold)</p>
               </div>
-              <div>
-                <p className="text-sm text-blue-100 mb-1">Repayment Terms</p>
-                <p className="text-lg font-bold">61 days - 72 months</p>
-                <p className="text-xs text-blue-200 mt-1">Choose what fits your budget</p>
+              <div className="bg-white/10 p-4 rounded-lg">
+                <p className="text-sm text-blue-100 mb-1 font-semibold">Repayment Terms</p>
+                <p className="text-2xl font-bold">61 days - 72 months</p>
+                <p className="text-xs text-blue-200 mt-2">Minimum 61 days repayment period</p>
               </div>
             </div>
-            <div className="pt-4 border-t border-white/20">
-              <p className="text-sm text-blue-100 font-semibold">Representative Example:</p>
-              <p className="text-sm text-white mt-2">
-                $5,000 loan at 21% APR for 24 months = $254.12/month. Total repayment: $6,098.88 (includes $1,098.88 in interest and fees)
+            <div className="pt-4 border-t-2 border-white/30 bg-white/10 p-4 rounded-lg">
+              <p className="text-base text-white font-bold mb-2">Representative Example (Required by TILA):</p>
+              <p className="text-base text-white font-semibold">
+                Loan Amount: $5,000 | APR: 21% | Term: 24 months
+              </p>
+              <p className="text-base text-white font-semibold mt-2">
+                Monthly Payment: $254.12 | Total Cost: $6,098.88
+              </p>
+              <p className="text-sm text-blue-100 mt-2">
+                (Total includes $1,098.88 in interest and fees over loan term)
               </p>
             </div>
-            <div className="pt-4 border-t border-white/20">
-              <p className="text-xs text-blue-100">
-                We are a loan marketplace connecting you with licensed lending partners. Checking eligibility may result in a soft credit inquiry.
+            <div className="pt-4 border-t-2 border-white/30">
+              <p className="text-sm text-white font-bold mb-2">
+                Important: We Are a Loan Matching Service, Not a Direct Lender
+              </p>
+              <p className="text-sm text-blue-100">
+                Cash Bear Loans connects you with licensed lending partners. All loan terms, rates, and fees are determined by the lender. Checking eligibility may result in a soft credit inquiry which does not affect your credit score. Approval and funding are not guaranteed.
               </p>
             </div>
           </div>
