@@ -4,7 +4,7 @@ export const getOrganizationSchema = () => ({
   "@type": "FinancialService",
   "name": "Cash Bear Loans",
   "alternateName": "Cash Bear Loans",
-  "description": "Licensed lender providing transparent personal installment loans to help you achieve your financial goals.",
+  "description": "Licensed lender providing transparent  Installment Loan to help you achieve your financial goals.",
   "url": "https://cashbearloan.com",
   "logo": "https://cashbearloan.com/bear-icon.svg",
   "image": "https://images.pexels.com/photos/3483098/pexels-photo-3483098.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop",
@@ -33,7 +33,7 @@ export const getOrganizationSchema = () => ({
     "@type": "Country",
     "name": "United States"
   },
-  "serviceType": "Personal Installment Loans",
+  "serviceType": " Installment Loan",
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Personal Installment Loan Products",
