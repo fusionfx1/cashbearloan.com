@@ -26,7 +26,6 @@ const FAQ = lazy(() => import('./components/FAQ'));
 const QuickStartModal = lazy(() => import('./components/QuickStartModal'));
 const ApplicationModal = lazy(() => import('./components/ApplicationModal'));
 const SnowfallEffect = lazy(() => import('./components/SnowfallEffect'));
-const PartnerLenderDisclosure = lazy(() => import('./components/PartnerLenderDisclosure'));
 const StateAvailability = lazy(() => import('./components/StateAvailability'));
 
 // Lazy load separate pages
@@ -200,9 +199,6 @@ function App() {
         </Suspense>
         <Suspense fallback={<div className="py-12 text-center">Loading...</div>}>
           <StateAvailability />
-        </Suspense>
-        <Suspense fallback={<div className="py-12 text-center">Loading...</div>}>
-          <PartnerLenderDisclosure />
         </Suspense>
         <Suspense fallback={<div className="py-12 text-center">Loading...</div>}>
           <Disclosures />
