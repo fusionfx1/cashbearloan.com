@@ -100,6 +100,50 @@ function App() {
     initDeferredAnalytics();
   }, []);
 
+  // Handle URL hash navigation for Google Ads Sitelinks
+  useEffect(() => {
+    const handleHashNavigation = () => {
+      const hash = window.location.hash.replace('#', '');
+
+      if (!hash) return;
+
+      // Special case: #apply opens the quick start modal
+      if (hash === 'apply') {
+        setTimeout(() => {
+          setShowQuickStart(true);
+        }, 500);
+        return;
+      }
+
+      // Wait for lazy-loaded components to render
+      setTimeout(() => {
+        const element = document.getElementById(hash);
+
+        if (element) {
+          // Calculate offset for fixed header (approximately 80px)
+          const headerOffset = 80;
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }, 1000);
+    };
+
+    // Handle on mount
+    handleHashNavigation();
+
+    // Handle hash changes
+    window.addEventListener('hashchange', handleHashNavigation);
+
+    return () => {
+      window.removeEventListener('hashchange', handleHashNavigation);
+    };
+  }, []);
+
   // Combine structured data for home page
   const homeStructuredData = [
     getOrganizationSchema(),
@@ -177,31 +221,53 @@ function App() {
       />
       <Header />
       <main id="main-content" role="main">
-        <Hero />
-        <Benefits />
+        <div id="hero">
+          <Hero />
+        </div>
+        <div id="benefits">
+          <Benefits />
+        </div>
         <Suspense fallback={<div className="py-12 text-center">Loading calculator...</div>}>
-          <LoanCalculator />
+          <div id="calculator">
+            <LoanCalculator />
+          </div>
         </Suspense>
-        <SocialProof />
+        <div id="testimonials">
+          <SocialProof />
+        </div>
         <ContextualCTA variant="social" onApplyClick={handleQuickApply} />
         <Suspense fallback={<div className="py-12 text-center">Loading...</div>}>
-          <PaymentPlans />
+          <div id="plans">
+            <PaymentPlans />
+          </div>
         </Suspense>
-        <Eligibility />
-        <ApplicationProcess />
+        <div id="eligibility">
+          <Eligibility />
+        </div>
+        <div id="process">
+          <ApplicationProcess />
+        </div>
         <UrgencySection />
         <ContextualCTA variant="eligibility" onApplyClick={handleQuickApply} />
         <Suspense fallback={<div className="py-12 text-center">Loading...</div>}>
-          <FAQ />
+          <div id="faq">
+            <FAQ />
+          </div>
         </Suspense>
         <Suspense fallback={<div className="py-12 text-center">Loading...</div>}>
-          <TrustSection />
+          <div id="trust">
+            <TrustSection />
+          </div>
         </Suspense>
         <Suspense fallback={<div className="py-12 text-center">Loading...</div>}>
-          <StateAvailability />
+          <div id="states">
+            <StateAvailability />
+          </div>
         </Suspense>
         <Suspense fallback={<div className="py-12 text-center">Loading...</div>}>
-          <Disclosures />
+          <div id="disclosures">
+            <Disclosures />
+          </div>
         </Suspense>
       </main>
       <Footer />
