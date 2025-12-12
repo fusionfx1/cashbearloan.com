@@ -1,5 +1,6 @@
 {
-  "name": "installment-loans-landing-page",
+  // wrangler.json
+"name": "cashbearloan-new",
   "compatibility_date": "2025-12-12",
   "assets": {
     "directory": "./dist"
