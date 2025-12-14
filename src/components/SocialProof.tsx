@@ -13,45 +13,45 @@ const SocialProof: React.FC = () => {
       name: "Sarah M.",
       location: "Austin, TX",
       rating: 5,
-      text: "Perfect timing for the holidays! Got $5,000 approved in 30 minutes for gifts and travel. The process was incredibly easy and stress-free.",
-      amount: "$5,000",
-      purpose: "Holiday Shopping",
-      petType: ""
+      text: "My dog needed emergency surgery and I didn't have $3,800 saved. Got approved in minutes and my Golden Retriever is healthy again. The monthly payments are so manageable!",
+      amount: "$3,800",
+      purpose: "Emergency Surgery",
+      petType: "Golden Retriever"
     },
     {
       name: "Mike R.",
       location: "Denver, CO",
       rating: 5,
-      text: "Used the loan to cover unexpected expenses during the holiday season. The fixed monthly payment fits perfectly in my budget. Highly recommend!",
-      amount: "$3,200",
-      purpose: "Holiday Expenses",
-      petType: ""
+      text: "When my cat got diagnosed with diabetes, the treatment costs were overwhelming. This payment plan saved us. Max is thriving now and I can afford his care without stress.",
+      amount: "$2,400",
+      purpose: "Ongoing Treatment",
+      petType: "Cat"
     },
     {
       name: "Jennifer L.",
       location: "Miami, FL",
       rating: 5,
-      text: "Needed extra cash for family travel and gifts. Got approved for $4,500 within 24 hours with transparent terms. Made my holidays stress-free!",
-      amount: "$4,500",
-      purpose: "Holiday Travel",
-      petType: ""
+      text: "My rescue needed dental work urgently. Applied during lunch break, approved same day, and scheduled the surgery that week. No more pain for my sweet pup!",
+      amount: "$1,850",
+      purpose: "Dental Surgery",
+      petType: "Rescue Dog"
     },
     {
       name: "David K.",
       location: "Phoenix, AZ",
       rating: 5,
-      text: "Fast approval for unexpected bills during the holiday rush. Transparent terms, no hidden fees, and great customer service throughout.",
-      amount: "$2,800",
-      purpose: "Emergency Bills",
-      petType: ""
+      text: "ACL surgery for my Lab was $4,200. The vet offered this payment option and it was a lifesaver. He's running around like a puppy again. Zero regrets!",
+      amount: "$4,200",
+      purpose: "ACL Surgery",
+      petType: "Labrador"
     }
   ];
 
   const stats = [
     {
-      icon: Users,
-      number: "75,000+",
-      label: "Customers Helped",
+      icon: Heart,
+      number: "17,000+",
+      label: "Pets Treated",
       color: "from-accent-cyan to-accent-teal"
     },
     {
@@ -61,7 +61,7 @@ const SocialProof: React.FC = () => {
       color: "from-honey-primary to-warm-amber"
     },
     {
-      icon: Heart,
+      icon: Users,
       number: "98%",
       label: "Customer Satisfaction",
       color: "from-coral-primary to-coral-accent"
@@ -85,10 +85,10 @@ const SocialProof: React.FC = () => {
             </div>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Join 75,000+ Satisfied Customers
+            Join 17,000+ Pet Owners Who Trust Us
           </h2>
           <p className="text-base lg:text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            Real customers, real stories. See how we've helped thousands achieve their financial goals.
+            Real pet owners, real stories. See how we've helped thousands get the veterinary care their pets needed.
           </p>
         </div>
 
@@ -151,7 +151,7 @@ const SocialProof: React.FC = () => {
         <div className="bg-gradient-to-br from-slate-800 via-slate-700 to-cyan-700 rounded-3xl p-8 lg:p-12 text-white text-center">
           <div className="flex items-center justify-center mb-6">
             <Heart className="h-8 w-8 text-coral-accent mr-3" />
-            <h3 className="text-xl lg:text-2xl font-bold text-white" style={{textShadow: '0 2px 4px rgba(0,0,0,0.3)'}}>Trusted & Secure Installment Loans</h3>
+            <h3 className="text-xl lg:text-2xl font-bold text-white" style={{textShadow: '0 2px 4px rgba(0,0,0,0.3)'}}>Trusted Payment Plans for Pet Care</h3>
           </div>
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             <div className="flex items-center justify-center bg-white/15 backdrop-blur-md rounded-xl p-4 border border-white/20">
@@ -164,15 +164,15 @@ const SocialProof: React.FC = () => {
             <div className="flex items-center justify-center bg-white/15 backdrop-blur-md rounded-xl p-4 border border-white/20">
               <CheckCircle className="h-8 w-8 text-green-300 mr-3" />
               <div className="text-left">
-                <div className="font-bold text-white text-base" style={{textShadow: '0 1px 2px rgba(0,0,0,0.2)'}}>Fast Approval</div>
-                <div className="text-white text-sm font-medium" style={{textShadow: '0 1px 2px rgba(0,0,0,0.2)'}}>Fast Decisions</div>
+                <div className="font-bold text-white text-base" style={{textShadow: '0 1px 2px rgba(0,0,0,0.2)'}}>0% Interest Available</div>
+                <div className="text-white text-sm font-medium" style={{textShadow: '0 1px 2px rgba(0,0,0,0.2)'}}>Flexible Payment Options</div>
               </div>
             </div>
             <div className="flex items-center justify-center bg-white/15 backdrop-blur-md rounded-xl p-4 border border-white/20">
               <Heart className="h-8 w-8 text-pink-300 mr-3" />
               <div className="text-left">
-                <div className="font-bold text-white text-base" style={{textShadow: '0 1px 2px rgba(0,0,0,0.2)'}}>Customer First</div>
-                <div className="text-white text-sm font-medium" style={{textShadow: '0 1px 2px rgba(0,0,0,0.2)'}}>75,000+ Customers Helped</div>
+                <div className="font-bold text-white text-base" style={{textShadow: '0 1px 2px rgba(0,0,0,0.2)'}}>Pet Care First</div>
+                <div className="text-white text-sm font-medium" style={{textShadow: '0 1px 2px rgba(0,0,0,0.2)'}}>17,000+ Pets Helped</div>
               </div>
             </div>
           </div>
@@ -181,7 +181,7 @@ const SocialProof: React.FC = () => {
             onClick={handleApplyClick}
             className="bg-gradient-to-r from-coral-primary to-warm-orange hover:from-warm-orange hover:to-coral-primary text-white px-12 py-4 rounded-full font-bold text-xl transition-all duration-300 transform hover:scale-105 shadow-lg animate-pulse"
           >
-            Get Your Loan Today!
+            Check Your Rate Now
           </button>
         </div>
       </div>

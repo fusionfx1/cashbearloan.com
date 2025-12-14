@@ -301,14 +301,14 @@ export const siteContent = {
     description: "No hoops to jump through. No endless paperwork. Just a straightforward process designed to get you funded fast.",
     steps: [
       {
-        title: "Apply Online",
+        title: "Apply in 60 Seconds",
         description: "Quick and secure application:",
         bullets: [
           "Basic info about you and your finances",
           "Completely secure with bank-level encryption",
-          "Most people finish in under 5 minutes"
+          "Lightning-fast application process"
         ],
-        time: "Under 5 minutes"
+        time: "60 seconds"
       },
       {
         title: "Get Approved",

@@ -1,5 +1,5 @@
 import React from 'react';
-import { FileText, Search, DollarSign, Heart, CheckCircle } from 'lucide-react';
+import { Clock, CheckCircle, DollarSign, Heart, Zap } from 'lucide-react';
 import { siteContent } from '../content/text';
 
 const ApplicationProcess: React.FC = () => {
@@ -28,7 +28,7 @@ const ApplicationProcess: React.FC = () => {
 
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {steps.map((step, index) => {
-            const icons = [FileText, Search, DollarSign];
+            const icons = [Zap, CheckCircle, DollarSign];
             const IconComponent = icons[index];
             return (
               <div key={index} className="relative animate-fadeInUp" style={{ animationDelay: `${index * 0.2}s` }}>

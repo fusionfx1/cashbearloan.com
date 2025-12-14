@@ -21,51 +21,62 @@ const Hero: React.FC = () => {
         {/* Centered Hero Content */}
         <div className="text-center max-w-5xl mx-auto space-y-8 lg:space-y-12">
 
-          {/* Trust Badges */}
-          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 animate-fadeInUp">
-            <div className="flex items-center bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 border border-white/20">
-              <Star className="h-5 w-5 text-honey-primary mr-2 fill-current" />
-              <span className="text-sm sm:text-base font-bold">4.9/5 Rating</span>
-            </div>
-            <div className="flex items-center bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 border border-white/20">
-              <Users className="h-5 w-5 text-accent-cyan mr-2" />
-              <span className="text-sm sm:text-base font-bold">100,000+ Funded</span>
-            </div>
-            <div className="flex items-center bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 border border-white/20">
-              <Shield className="h-5 w-5 text-success-emerald mr-2" />
-              <span className="text-sm sm:text-base font-bold">Bank-Level Security</span>
+          {/* Primary Trust Badge - Above Headline */}
+          <div className="flex items-center justify-center gap-2 animate-fadeInUp">
+            <div className="flex items-center bg-gradient-to-r from-honey-primary to-warm-amber rounded-full px-6 py-3 shadow-2xl border-2 border-honey-primary/30">
+              <div className="flex gap-0.5 mr-3">
+                <Star className="h-5 w-5 text-white fill-current" />
+                <Star className="h-5 w-5 text-white fill-current" />
+                <Star className="h-5 w-5 text-white fill-current" />
+                <Star className="h-5 w-5 text-white fill-current" />
+                <Star className="h-5 w-5 text-white fill-current" />
+              </div>
+              <span className="text-base sm:text-lg font-bold text-white">Trusted by 17,000+ Pet Owners</span>
             </div>
           </div>
 
           {/* Main Headline */}
           <div className="space-y-6 animate-fadeInUp">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight">
-              Get Your Loan in
+              Instant Payment Plans for
               <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-warm-orange via-honey-primary to-accent-cyan">
-                Minutes, Not Days
+                Your Pet's Veterinary Care
               </span>
             </h1>
 
             <p className="text-lg sm:text-xl lg:text-2xl text-blue-100 font-medium leading-relaxed max-w-3xl mx-auto">
-              Fast, transparent installment loans from $1,000 to $25,000. Get approved today and receive funds as soon as tomorrow.
+              Split your vet bill into simple monthly payments. 0% interest options available.
             </p>
           </div>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fadeInUp">
+          {/* CTA Button */}
+          <div className="flex flex-col items-center gap-3 animate-fadeInUp">
             <button
               onClick={handleQuickApply}
-              className="group bg-cta-gradient text-white px-8 py-4 sm:px-10 sm:py-5 rounded-full text-lg sm:text-xl font-bold hover:shadow-2xl hover:shadow-warm-orange/50 hover:scale-105 transition-all duration-300 flex items-center"
+              className="group bg-cta-gradient text-white px-12 py-5 sm:px-14 sm:py-6 rounded-full text-xl sm:text-2xl font-bold hover:shadow-2xl hover:shadow-warm-orange/50 hover:scale-105 transition-all duration-300 flex items-center"
             >
-              Apply in 3 Minutes
-              <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
+              Check Your Rate
+              <ArrowRight className="ml-3 h-7 w-7 group-hover:translate-x-1 transition-transform" />
             </button>
-            <button
-              onClick={() => document.getElementById('calculator')?.scrollIntoView({ behavior: 'smooth' })}
-              className="bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white px-8 py-4 sm:px-10 sm:py-5 rounded-full text-lg sm:text-xl font-bold hover:bg-white/20 hover:scale-105 transition-all duration-300"
-            >
-              Calculate Payment
-            </button>
+            <p className="text-sm sm:text-base text-blue-200 font-medium">
+              Checking eligibility will NOT affect your credit score.
+            </p>
+          </div>
+
+          {/* Secondary Trust Badges */}
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 pt-4">
+            <div className="flex items-center bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 border border-white/20">
+              <Shield className="h-5 w-5 text-success-emerald mr-2" />
+              <span className="text-sm sm:text-base font-bold">Bank-Level Security</span>
+            </div>
+            <div className="flex items-center bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 border border-white/20">
+              <Zap className="h-5 w-5 text-honey-primary mr-2" />
+              <span className="text-sm sm:text-base font-bold">Instant Approval</span>
+            </div>
+            <div className="flex items-center bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 border border-white/20">
+              <CheckCircle className="h-5 w-5 text-accent-cyan mr-2" />
+              <span className="text-sm sm:text-base font-bold">No Hidden Fees</span>
+            </div>
           </div>
 
           {/* Key Features Grid */}
